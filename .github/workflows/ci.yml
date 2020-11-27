@@ -45,7 +45,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Build The Nginx Server With React Output
         env:
-          NGINX_PKG_NAME: "docker.pkg.github.com/petersdavis/PlanitarInterview/nginxserver"
+          NGINX_PKG_NAME: "docker.pkg.github.com/petersdavis/planitarinterview/nginxserver"
         run: |
           docker build -t nginxserver:latest . 
           PACKAGE_NAME=${NGINX_PKG_NAME}:$(date +%s)
@@ -58,7 +58,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Build The GO Server
         env:
-          GO_PKG_NAME: "docker.pkg.github.com/petersdavis/PlanitarInterview/goserver"
+          GO_PKG_NAME: "docker.pkg.github.com/petersdavis/planitarinterview/goserver"
         run: |
           pushd go
           docker build -t goserver:latest . 
