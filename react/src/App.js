@@ -29,10 +29,10 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path="/edit/:name" render={(props) => (
-                <EditArticle {...props} fetch={fetch} />
+                <EditArticle {...props} fetch={fetch.bind(window)} />
               )}></Route>
           <Route path="/:name"  render={(props) => (
-                <ViewArticle {...props} fetch={fetch} />
+                <ViewArticle {...props} fetch={fetch.bind(window)} />
               )}
               ></Route>
           <Route exact path="/">
