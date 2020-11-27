@@ -38,3 +38,10 @@ jobs:
           pushd go
           go get -u github.com/gorilla/mux
           go test -v
+  build-nginx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build The Nginx Server With React Output
+        run: |
+          docker build .
