@@ -20,7 +20,8 @@ class ViewArticle extends Component{
     this.setState({name: this.props.match.params.name})
 
     let url = "http://localhost:8080/articles/"+this.props.match.params.name;
-    fetch(url, {
+    console.log("PROPS", this.props)
+    this.props.fetch(url, {
       headers: {
         'Accept': 'text/plain',
       },

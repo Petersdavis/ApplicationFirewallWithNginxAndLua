@@ -48,7 +48,7 @@ class Home extends Component {
     return (
       <div>
         <Header name={"Index"} buttons={buttons}/>
-        <ArticleList />
+        <ArticleList fetch={fetch}/>
         <NewArticleModal open={this.state.createArticleModalOpen} handleClose={this.handleClose} setNewArticleName={this.setNewArticleName} createArticleName = {this.state.createArticleName} createArticleSubmit={this.createArticleSubmit} ></NewArticleModal>
         
       </div>

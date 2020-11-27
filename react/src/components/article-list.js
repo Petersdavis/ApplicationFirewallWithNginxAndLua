@@ -11,7 +11,7 @@ class ArticleList extends Component {
 
   componentDidMount() {
     let url = "http://localhost:8080/articles";
-    fetch(url, {
+    this.props.fetch(url, {
       headers: {
         'Accept': 'application/json',
       },

@@ -28,8 +28,13 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/edit/:name" component={EditArticle}></Route>
-          <Route path="/:name"  component={ViewArticle}></Route>
+          <Route path="/edit/:name" render={(props) => (
+                <EditArticle {...props} fetch={fetch} />
+              )}></Route>
+          <Route path="/:name"  render={(props) => (
+                <ViewArticle {...props} fetch={fetch} />
+              )}
+              ></Route>
           <Route exact path="/">
             <Home />
           </Route>

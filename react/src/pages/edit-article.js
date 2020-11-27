@@ -26,7 +26,7 @@ class EditArticle extends Component {
     this.setState({name: this.props.match.params.name})
 
     let url = "http://localhost:8080/articles/"+this.props.match.params.name;
-    fetch(url, {
+    this.props.fetch(url, {
       headers: {
         'Accept': 'text/plain',
       },
@@ -61,7 +61,7 @@ class EditArticle extends Component {
     }
 
     let url = "http://localhost:8080/articles/"+this.props.match.params.name;
-    fetch(url, {
+    this.props.fetch(url, {
       headers: {
         'Accept': 'text/plain',
       },
