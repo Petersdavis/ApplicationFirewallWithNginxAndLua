@@ -1,0 +1,46 @@
+.page-padding{
+  padding:5vh 5vw;
+
+}
+
+.app-header{
+  background-color:whitesmoke;
+  padding:15px;
+  height:125px;
+  .menu-container{
+    position:absolute;
+    right:0;
+    
+    .menu-item-container{
+      padding:4px;
+      
+    }
+    div{
+      display:inline;
+      .a{
+        display:inline;
+        .btn{
+          display: inline;
+          min-width:120px;
+        }
+  
+  
+      }
+    }
+  }
+}
+
+.loading-page{
+  width:100vw;
+  height:100vh;
+  text-align:center;
+
+  img{
+    margin-top: 33vh;
+    height: 33vh;
+  }
+}
+
+.btn{
+  margin:5px !important;
+}

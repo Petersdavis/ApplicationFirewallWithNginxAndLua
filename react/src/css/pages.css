@@ -1,0 +1,30 @@
+.page-padding {
+  padding: 5vh 5vw; }
+
+.app-header {
+  background-color: whitesmoke;
+  padding: 15px;
+  height: 125px; }
+  .app-header .menu-container {
+    position: absolute;
+    right: 0; }
+    .app-header .menu-container .menu-item-container {
+      padding: 4px; }
+    .app-header .menu-container div {
+      display: inline; }
+      .app-header .menu-container div .a {
+        display: inline; }
+        .app-header .menu-container div .a .btn {
+          display: inline;
+          min-width: 120px; }
+
+.loading-page {
+  width: 100vw;
+  height: 100vh;
+  text-align: center; }
+  .loading-page img {
+    margin-top: 33vh;
+    height: 33vh; }
+
+.btn {
+  margin: 5px !important; }
