@@ -39,9 +39,19 @@ jobs:
           go get -u github.com/gorilla/mux
           go test -v
   build-nginx:
+    needs: [unit-tests-react, unit-tests-go]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Build The Nginx Server With React Output
         run: |
-          docker build .
+          docker build -t nginxserver:latest . 
+  build-go:
+    needs: [unit-tests-react, unit-tests-go]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build The GO Server
+        run: |
+          pushd go
+          docker build -t goserver:latest . 
