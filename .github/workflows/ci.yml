@@ -44,14 +44,24 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build The Nginx Server With React Output
+        env:
+          NGINX_PKG_NAME: "docker.pkg.github.com/petersdavis/PlanitarInterview/nginxserver"
         run: |
           docker build -t nginxserver:latest . 
+          PACKAGE_NAME=${NGINX_PKG_NAME}:$(date +%s)
+          docker tag nginxserver:latest ${PACKAGE_NAME}
+          docker push ${PACKAGE_NAME}     
   build-go:
     needs: [unit-tests-react, unit-tests-go]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Build The GO Server
+        env:
+          GO_PKG_NAME: "docker.pkg.github.com/petersdavis/PlanitarInterview/goserver"
         run: |
           pushd go
           docker build -t goserver:latest . 
+          PACKAGE_NAME=${GO_PKG_NAME}:$(date +%s)
+          docker tag nginxserver:latest ${PACKAGE_NAME}
+          docker push ${PACKAGE_NAME}   
