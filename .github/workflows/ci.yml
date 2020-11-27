@@ -36,4 +36,5 @@ jobs:
       - name: Run Go Unit Tests
         run: |
           pushd go
+          go get -u github.com/gorilla/mux
           go test -v
