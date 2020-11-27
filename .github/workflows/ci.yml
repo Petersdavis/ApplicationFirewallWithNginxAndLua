@@ -73,5 +73,5 @@ jobs:
           pushd go
           docker build -t goserver:latest . 
           PACKAGE_NAME=${GO_PKG_NAME}:$(date +%s)
-          docker tag nginxserver:latest ${PACKAGE_NAME}
+          docker tag goserver:latest ${PACKAGE_NAME}
           docker push ${PACKAGE_NAME}   
