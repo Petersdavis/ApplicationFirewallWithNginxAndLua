@@ -21,8 +21,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch": "watch 'npm run build-dev' ./src",
-    "build-css": "node-sass-chokidar src/sass -o src/css --recursive",
-    "watch-css": "npm run build-css && node-sass-chokidar src/sass -o src/css --watch"
+    "build-css": "node-sass-chokidar src/sass -o ./public/css --recursive",
+    "watch-css": "npm run build-css && node-sass-chokidar src/sass -o ./public/css  --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
