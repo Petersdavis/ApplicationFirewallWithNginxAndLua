@@ -11,4 +11,5 @@ EXPOSE 80
 COPY nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=builder /react/build/ /var/www/
+RUN chmod -R 777 /var/www/ 
 RUN ls /var/www

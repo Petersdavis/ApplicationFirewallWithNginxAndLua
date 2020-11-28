@@ -1,9 +1,9 @@
 version: "3.6"
 services:
   goservice:
-    build: "./go"
+    build: ./go
   nginx:
-    build: "./nginx"
+    build: .
     ports:
       - "80:80"
       - "8080:8080"
