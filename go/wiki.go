@@ -65,21 +65,10 @@ func getArticleHttp(w http.ResponseWriter, r *http.Request) {
 		return -1
 	}, name)
 
-	for key, value := range articleStore {
-		if strings.Compare(key, name) == 0 {
-			log.Print("FFIN FOUND IT")
-		} else {
-			fmt.Println("A:", key, "B:", name, "NOT EQUAL", len(key), len(name))
-		}
-		fmt.Println("Key:", key, "Value:", value)
-	}
-
 	/*
 	*  If the article exists return 200 OK Content-Type: text/html with the article {else} return 404 Not Found
 	 */
 
-	val, ok := articleStore[name]
-	fmt.Println("OK:", ok, "Value:", val)
 	content, err := getArticle(name)
 	if err != ErrNotFound {
 		w.WriteHeader(http.StatusOK)

@@ -16,7 +16,6 @@ var articleStore = map[string]*wiki{}
 func putArticle(name string, data []byte) {
 	_, ok := articleStore[name]
 	if ok {
-		log.Print("Updating Article")
 		art, _ := articleStore[name]
 		art.content = data
 		return
@@ -26,14 +25,11 @@ func putArticle(name string, data []byte) {
 }
 
 func getArticle(name string) (content []byte, err error) {
-	log.Print("Looking for "+ name)
 	_, ok := articleStore[name]
 	if ok {
-		log.Print("Found Article")
 		content = articleStore[name].content
 		return
 	} else {
-		log.Print("REALLY NOT FOUND")
 		err = ErrNotFound
 		return
 	}
