@@ -30,3 +30,61 @@ textarea, .jumbotron{
   margin:auto;
 
 }
+
+.page-padding{
+  padding:5vh 5vw;
+
+}
+
+.app-header{
+  background-color:whitesmoke;
+  padding:15px;
+  height:125px;
+  .menu-container{
+    position:absolute;
+    right:0;
+    
+    .menu-item-container{
+      padding:4px;
+      
+    }
+    div{
+      display:inline;
+      .a{
+        display:inline;
+        .btn{
+          display: inline;
+          min-width:120px;
+        }
+  
+  
+      }
+    }
+  }
+}
+
+.loading-page{
+  width:100vw;
+  height:100vh;
+  text-align:center;
+
+  img{
+    margin-top: 33vh;
+    height: 33vh;
+  }
+}
+
+.btn{
+  margin:5px !important;
+}
+
+.article-card{
+  border-radius:4px;
+  border: solid 1px black;
+  display:block;
+  padding:15px;
+  margin:10px 5% 10px 5%;
+  width:90%;
+  box-shadow: 3px 3px darkgray;
+  cursor:pointer;
+}
